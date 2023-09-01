@@ -2,6 +2,12 @@
 
 Presenting names for English-language applications where a basic model of first and last name(s) combined is sufficient. This approach is not meant to cover all possible naming cases, deal with other languages, or even titulations. Just the basics.
 
+## Notes for traels.it TDD exercise
+1. Klon dette repo
+2. `bundle install`
+3. Kør tests med `bundle exec rake test`
+4. Implementér den manglende metode så alle tests lyser grøn
+
 ## Examples
 
 ```ruby
