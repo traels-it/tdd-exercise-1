@@ -35,19 +35,6 @@ module NameOfPerson
       @sorted ||= last.present? ? "#{last}, #{first}" : first
     end
 
-    # Returns full name with with trailing 's or ' if name ends in s.
-    def possessive(method = :full)
-      whitelist = %i[full first last abbreviated sorted initials]
-
-      unless whitelist.include?(method.to_sym)
-        raise ArgumentError, 'Please provide a valid method'
-      end
-
-      name = public_send(method)
-
-      @possessive ||= "#{name}'#{'s' unless name.downcase.end_with?('s')}"
-    end
-
     # Returns just the initials.
     def initials
       @initials ||= remove(/(\(|\[).*(\)|\])/).scan(/([[:word:]])[[:word:]]*/i).join
